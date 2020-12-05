@@ -21,9 +21,6 @@ Output = Average of that file
 ********
 
 """
-import re
-import os, os.path
-
 
 class File (object):
     def __init__(self, file):
