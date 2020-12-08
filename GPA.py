@@ -46,21 +46,29 @@ class GPA_Calculator(object):
 
     #Take all the input of GUI in credits and point form 
     def __init__(self, credit1, points1, credit2, points2, credit3, points3, credit4, points4):
+        
+        self.error = False 
 
         #Converts the string into a float
-        self.credit1 = float(credit1)
-        self.points1 = float(points1)
+        try:
+            
+            self.credit1 = float(credit1)
+            self.points1 = float(points1)
 
-        
-        self.credit2 = float(credit2)
-        self.points2 = float(points2)
-        
-        
-        self.credit3 = float(credit3)
-        self.points3 = float(points3)
-        
-        self.credit4 = float(credit4)
-        self.points4 = float(points4)
+            
+            self.credit2 = float(credit2)
+            self.points2 = float(points2)
+            
+            
+            self.credit3 = float(credit3)
+            self.points3 = float(points3)
+            
+            self.credit4 = float(credit4)
+            self.points4 = float(points4)
+        except:
+            
+            self.error = True
+            return
         
         #Creates a list for addition and adds all the credit to that list 
         self.creditList =[]
