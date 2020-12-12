@@ -51,7 +51,7 @@ class File (object):
         #Gets ride of /n
         self.text= ""
         for line in self.f:
-            self.stripped_line=line.rstrip()
+            self.stripped_line=line.rstrip() #New Concept I apply to this program 
             self.text+=self.stripped_line
         self.f.close()
         return(self.text)
