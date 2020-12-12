@@ -40,6 +40,7 @@ class converter(EasyFrame):
             print(self.total)
             self.written = str(self.total)
             f = open(self.keep + ".txt", 'a')
+            #'a' is a new concept that I used when writing this program, the purpose is to update rather than rewrite. 
             print("File opened")
             f.writelines(self.written + "%\n")
             f.close()
